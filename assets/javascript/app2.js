@@ -64,6 +64,7 @@ var correctAnswer;
 
 
 function run() {
+	decrement();
 	intervalId = setInterval(decrement, 1000);
 
 }
