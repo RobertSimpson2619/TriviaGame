@@ -57,13 +57,18 @@ var questionCounter = 0;
 
 function createQuestion(){
 	var loggedQuestion = questions[questionCounter].question;
-	$("#showQ").html("<h2> TEST"+ loggedQuestion +"</h2>");
+	var correctAnswer = questions[questionCounter].correctAnswer;
+	$("#showQ").empty().append("<h2> TEST"+ loggedQuestion +"</h2>");
 	console.log(loggedQuestion);
+
+
 
 	for(var i =0; i< questions[questionCounter].choices.length; i++){
 		var loggedAnswers = questions[questionCounter].choices[i];
 		console.log(loggedAnswers);
 		$("#showA").prepend("<div>" + loggedAnswers + "</div>");
+
+
 
 		// if the html element of the clicked div = correct answer 
 		// question counter ++
